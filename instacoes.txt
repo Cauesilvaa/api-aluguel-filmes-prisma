@@ -1,0 +1,34 @@
+* Para rodar o projeto
+- yarn dev
+
+* Para rodar o db de visualização do primsma
+- yarn prisma studio
+
+* Para criação do projeto
+- yarn init -y
+- yarn add prisma ts-node-dev typescript @types/express
+- yarn add @prisma/client express
+
+* No packge.json adicionei esse script q ta adicionando essas tags para deixar o codigo mais performaticos
+"scripts": {
+    "dev":"ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
+  },
+
+* Criar a mão o arquivo 'tsconfig.json' na raiz
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "outDir": "dist",
+        "strict": true,
+        "lib": ["ESNext"],
+        "esModuleInterop": true
+    }
+}
+
+- yarn prisma init
+
+* Dps de criar toda a arquitetura da tabela ou da database no 'schema.prisma' roda o comando abaixo
+- yarn prisma migrate dev > nomeDaMigration
+
+
+Segui o tutorial  de videos 1, 2 e 3: https://www.youtube.com/watch?v=JX9Kz8lvlcw&t=692s (video 2)

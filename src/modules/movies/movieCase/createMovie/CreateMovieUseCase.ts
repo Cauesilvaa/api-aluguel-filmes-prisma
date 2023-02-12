@@ -4,6 +4,8 @@ import { prisma } from "../../../../prisma/client/PrismaClient";
 import { AppError } from "../../../../errors/AppError";
 
 export class CreateMovieUseCase {
+
+    // O 'Promise<Movie>' indica que o retorno do execute é uma promise do tipo 'movie'
     async execute({title, duration, release_date}: CreateMovieDTO): Promise<Movie> {
 
         // Verifica se o filme ja existe 
